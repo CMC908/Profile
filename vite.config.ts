@@ -3,10 +3,13 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 export default defineConfig({
-  base: "/Profile/", // Replace with your GitHub repo name
+  base: "/", // ✅ Use root base for Vercel (no /Profile/)
+  build: {
+    outDir: "dist/spa" // ✅ Matches your deploy target
+  },
   server: {
-    host: "::",
-    port: 8080,
+    host: true,
+    port: 5173,
     fs: {
       allow: [
         path.resolve(__dirname),
@@ -15,9 +18,6 @@ export default defineConfig({
       ],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"]
     }
-  },
-  build: {
-    outDir: "dist/spa"
   },
   plugins: [react()],
   resolve: {
