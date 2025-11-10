@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.builder",
+    "\\.builder\\rules",
+    "\\client",
+    "\\client\\lib",
+    "\\client\\pages"
+  ],
+  "SelectedNode": "\\client\\pages\\ProjectDetail.tsx",
+  "PreviewInSolutionExplorer": false
+}
